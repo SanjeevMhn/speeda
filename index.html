@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speeda</title>
+    <link rel="stylesheet" href="./dist/css/styles.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./imgs/favIcons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./imgs/favIcons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./imgs/favIcons/favicon-16x16.png">
+    <link rel="manifest" href="./imgs/favIcons/site.webmanifest">
+    <link rel="mask-icon" href="./imgs/favIcons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="main-wrapper overflow-hidden">
+    <a href="#" class="to-top">
+        <div class="icon-container">
+            <i class="bi bi-chevron-up"></i>
+        </div>
+    </a>
+        <header class="main-header overflow-hidden">
+            <div class="sticky-nav">
+                <div class="container-fluid">
+                    <a href="#" class="company-logo">
+                        <div class="icon-container">
+                            <svg width="250" height="25" viewBox="0 0 250 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M46.6344 0V24.4337H51.5693V14.9101H68.7919L72.2957 11.8505V3.05959L68.7919 0H46.6344ZM67.3115 10.5578H51.5693V4.35238H67.3115V10.5578Z" fill="white"/>
+                                <path d="M116.561 20.0813H97.0687V14.2637H111.923V9.91136H97.0687V4.30929H116.561V0H92.0845V24.4337H116.561V20.0813Z" fill="white"/>
+                                <path d="M160.876 20.0813H141.334V14.2637H156.188V9.91136H141.334V4.30929H160.876V0H136.4V24.4337H160.876V20.0813Z" fill="white"/>
+                                <path d="M180.665 0V24.4337H196.358L205.142 17.3233V7.15341L197 0H180.665ZM200.207 15.4272L194.433 20.0813H185.649V4.30929H194.927L200.207 8.92022V15.4272Z" fill="white"/>
+                                <path d="M19.8381 5.60207H25.6613V3.05959L22.1575 0H3.50375L0 3.05959V11.2041L3.50375 14.2637H20.6771V20.1244L5.82313 20.0813V18.8316H0V21.3741L3.50375 24.4337H22.1575L25.6613 21.3741V12.971L22.1575 9.91136H4.93486V4.35238H19.8381V5.60207Z" fill="white"/>
+                                <path d="M237.021 0H231.692L218.614 24.4337H224.043L226.707 19.4349L226.757 19.3056H241.808L241.857 19.4349L244.522 24.4337H250L237.021 0ZM229.126 14.9963L229.224 14.8239L234.356 5.21424L239.489 14.8239L239.587 14.9963H229.126Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <button class="side-nav d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+                        <div class="img-container lang-flag">
+                            <img src="./imgs/Flag/GBR.png" alt="">
+                        </div>
+                        <div class="icon-container">
+                            <i class="bi bi-list"></i>
+                        </div>
+                    </button>
+                    <ul class="menu-list roboto d-none d-lg-flex">
+                        <li class="list-item">
+                            <a href="#" class="list-link active text-uppercase">home</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="javascript:void(0)" class="list-link text-uppercase">features</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="javascript:void(0)" class="list-link text-uppercase">clients</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="javascript:void(0)" class="list-link text-uppercase">pricing</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="javascript:void(0)" class="list-link text-uppercase">asean insights</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="top-nav d-none d-lg-block">
+                <div class="container-fluid">
+                    <ul class="link-btns roboto" type="none">
+                        <li class="list-items">
+                            <a href="spasia_sales@uzabase.com" >
+                                <div class="icon-container d-inline">
+                                    <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 13.2264C19.9969 13.4488 19.9042 13.661 19.7419 13.8171C19.5797 13.9733 19.361 14.0608 19.1331 14.0608H1.86687C1.639 14.0608 1.4203 13.9733 1.25806 13.8171C1.09583 13.661 1.00312 13.4488 1 13.2264V1.846C1 1.62162 1.09132 1.40644 1.25389 1.24779C1.41647 1.08913 1.63696 1 1.86687 1H19.1331C19.363 1 19.5835 1.08913 19.7461 1.24779C19.9087 1.40644 20 1.62162 20 1.846V13.2264Z" stroke="#FF5E83" stroke-miterlimit="10"/>
+                                        <path d="M18.7056 2.26318L12.6375 8.18517C12.0699 8.73716 11.3013 9.04711 10.5 9.04711C9.69871 9.04711 8.93008 8.73716 8.3625 8.18517L2.72188 2.68039" stroke="#FF5E83" stroke-miterlimit="10" stroke-linecap="round"/>
+                                        <path d="M2.73376 12.3807L6.61688 8.59106" stroke="#FF5E83" stroke-miterlimit="10" stroke-linecap="round"/>
+                                        <path d="M18.2781 12.3807L14.395 8.59106" stroke="#FF5E83" stroke-miterlimit="10" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <span class="email-txt">spasia_sales@uzabase.com</span>
+                            </a>
+                        </li>
+                        <li class="list-items">
+                            <span class="lang-txt text-capitalize">english</span>
+                            <div class="img-container">
+                                <img src="./imgs/Flag/GBR.png" alt="">
+                            </div> 
+                        </li>
+                        <li class="list-items">
+                            <div class="icon-container">
+                                <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5238 20.5237C15.7837 20.5237 20.0476 16.2597 20.0476 10.9999C20.0476 5.74003 15.7837 1.47607 10.5238 1.47607C5.26395 1.47607 1 5.74003 1 10.9999C1 16.2597 5.26395 20.5237 10.5238 20.5237Z" stroke="#E65576" stroke-linejoin="round"/>
+                                    <path d="M16.238 17.1905L13.1999 15.9715C12.9951 15.916 12.8119 15.7999 12.6742 15.6385C12.5365 15.477 12.4509 15.2777 12.4285 15.0667V14.3334C13.8571 13.9 13.938 12.5953 13.938 11.4762C14.1479 11.3481 14.3359 11.1874 14.4952 11C14.7565 10.382 14.9173 9.72605 14.9714 9.05718L14.3333 8.61908V7.36194C14.3333 5.48575 12.6666 3.85718 10.5237 3.85718C8.38088 3.85718 6.71421 5.48575 6.71421 7.36194V8.61908L6.08564 9.05718C6.13972 9.72605 6.30048 10.382 6.56183 11C6.72107 11.1874 6.90915 11.3481 7.11897 11.4762C7.11897 12.5953 7.19992 13.9 8.62849 14.3334V15.0667C8.6061 15.2777 8.52046 15.477 8.38279 15.6385C8.24513 15.7999 8.06187 15.916 7.85706 15.9715L4.80945 17.1905" stroke="#E65576" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="login-txt text-uppercase">login</span>
+                        </li>
+                    </ul>
+                    <a href="javascript:void(0)" class="linkedin-link">
+                        <img src="./imgs/Group.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="main-navbar">
+                <div class="container-fluid">
+                    <a href="#" class="company-logo">
+                        <div class="icon-container">
+                            <svg width="250" height="25" viewBox="0 0 250 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M46.6344 0V24.4337H51.5693V14.9101H68.7919L72.2957 11.8505V3.05959L68.7919 0H46.6344ZM67.3115 10.5578H51.5693V4.35238H67.3115V10.5578Z" fill="white"/>
+                                <path d="M116.561 20.0813H97.0687V14.2637H111.923V9.91136H97.0687V4.30929H116.561V0H92.0845V24.4337H116.561V20.0813Z" fill="white"/>
+                                <path d="M160.876 20.0813H141.334V14.2637H156.188V9.91136H141.334V4.30929H160.876V0H136.4V24.4337H160.876V20.0813Z" fill="white"/>
+                                <path d="M180.665 0V24.4337H196.358L205.142 17.3233V7.15341L197 0H180.665ZM200.207 15.4272L194.433 20.0813H185.649V4.30929H194.927L200.207 8.92022V15.4272Z" fill="white"/>
+                                <path d="M19.8381 5.60207H25.6613V3.05959L22.1575 0H3.50375L0 3.05959V11.2041L3.50375 14.2637H20.6771V20.1244L5.82313 20.0813V18.8316H0V21.3741L3.50375 24.4337H22.1575L25.6613 21.3741V12.971L22.1575 9.91136H4.93486V4.35238H19.8381V5.60207Z" fill="white"/>
+                                <path d="M237.021 0H231.692L218.614 24.4337H224.043L226.707 19.4349L226.757 19.3056H241.808L241.857 19.4349L244.522 24.4337H250L237.021 0ZM229.126 14.9963L229.224 14.8239L234.356 5.21424L239.489 14.8239L239.587 14.9963H229.126Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <button class="side-nav d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+                        <div class="img-container lang-flag">
+                            <img src="./imgs/Flag/GBR.png" alt="">
+                        </div>
+                        <div class="icon-container">
+                            <i class="bi bi-list"></i>
+                        </div>
+                    </button>
+                    <div class="offcanvas offcanvas-start roboto" id="offcanvas" tabindex="-1">
+                        <div class="offcanvas-header d-flex align-items-center justify-content-between">
+                            <a href="javascript:void(0)" class="img-container linkedin">
+                                <img src="./imgs/Group.png" alt="">
+                            </a>
+                            <button class="btn-close" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+                                <div class="icon-container">
+                                    <i class="bi bi-x"></i>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="nav-list">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-uppercase">home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" class="nav-link text-uppercase">features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" class="nav-link text-uppercase">clients</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" class="nav-link text-uppercase">pricing</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" class="nav-link text-uppercase">asean insights</a>
+                                </li>
+                            </ul>
+                            <div class="other-links">
+                                <div class="lang-options">
+                                    <button class="lang-btn gbr">
+                                        <span class="fw-bold text-capitalize">english</span>
+                                        <div class="img-container">
+                                            <img src="./imgs/Flag/GBR.png" alt="">
+                                        </div>
+                                    </button>
+                                    <button class="lang-btn jpn">
+                                        <span class="fw-bold text-capitalize">japan</span>
+                                        <div class="img-container">
+                                            <img src="./imgs/Flag/JPN.png" alt="">
+                                        </div>
+                                    </button>
+                                </div>
+                                <a href="spasia_sales@uzabase.com" class="email-link">
+                                    <div class="icon-container">
+                                        <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 13.2264C19.9969 13.4488 19.9042 13.661 19.7419 13.8171C19.5797 13.9733 19.361 14.0608 19.1331 14.0608H1.86687C1.639 14.0608 1.4203 13.9733 1.25806 13.8171C1.09583 13.661 1.00312 13.4488 1 13.2264V1.846C1 1.62162 1.09132 1.40644 1.25389 1.24779C1.41647 1.08913 1.63696 1 1.86687 1H19.1331C19.363 1 19.5835 1.08913 19.7461 1.24779C19.9087 1.40644 20 1.62162 20 1.846V13.2264Z" stroke="#FF5E83" stroke-miterlimit="10"/>
+                                            <path d="M18.7056 2.26318L12.6375 8.18517C12.0699 8.73716 11.3013 9.04711 10.5 9.04711C9.69871 9.04711 8.93008 8.73716 8.3625 8.18517L2.72188 2.68039" stroke="#FF5E83" stroke-miterlimit="10" stroke-linecap="round"/>
+                                            <path d="M2.73376 12.3807L6.61688 8.59106" stroke="#FF5E83" stroke-miterlimit="10" stroke-linecap="round"/>
+                                            <path d="M18.2781 12.3807L14.395 8.59106" stroke="#FF5E83" stroke-miterlimit="10" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <span>spasia_sales@uzabase.com</span>
+                                </a>
+                                <a href="javascript:void(0)" class="login-link">
+                                    <div class="icon-container">
+                                        <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.5238 20.5237C15.7837 20.5237 20.0476 16.2597 20.0476 10.9999C20.0476 5.74003 15.7837 1.47607 10.5238 1.47607C5.26395 1.47607 1 5.74003 1 10.9999C1 16.2597 5.26395 20.5237 10.5238 20.5237Z" stroke="#E65576" stroke-linejoin="round"/>
+                                            <path d="M16.238 17.1905L13.1999 15.9715C12.9951 15.916 12.8119 15.7999 12.6742 15.6385C12.5365 15.477 12.4509 15.2777 12.4285 15.0667V14.3334C13.8571 13.9 13.938 12.5953 13.938 11.4762C14.1479 11.3481 14.3359 11.1874 14.4952 11C14.7565 10.382 14.9173 9.72605 14.9714 9.05718L14.3333 8.61908V7.36194C14.3333 5.48575 12.6666 3.85718 10.5237 3.85718C8.38088 3.85718 6.71421 5.48575 6.71421 7.36194V8.61908L6.08564 9.05718C6.13972 9.72605 6.30048 10.382 6.56183 11C6.72107 11.1874 6.90915 11.3481 7.11897 11.4762C7.11897 12.5953 7.19992 13.9 8.62849 14.3334V15.0667C8.6061 15.2777 8.52046 15.477 8.38279 15.6385C8.24513 15.7999 8.06187 15.916 7.85706 15.9715L4.80945 17.1905" stroke="#E65576" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-uppercase">login</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                   <ul class="menu-list roboto d-none d-lg-flex">
+                        <li class="list-item">
+                            <a href="#" class="list-link active text-uppercase">home</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="javascript:void(0)" class="list-link text-uppercase">features</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="javascript:void(0)" class="list-link text-uppercase">clients</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="javascript:void(0)" class="list-link text-uppercase">pricing</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="javascript:void(0)" class="list-link text-uppercase">asean insights</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="hero-banner overflow-hidden">
+            <div class="container-fluid">
+                <div class="row roboto row-cols-1 row-cols-lg-2 gy-4">
+                    <div class="col">
+                        <div class="text-content">
+                            <h2 class="header-text">
+                                The Go-To Platform for Asia-Focused Company and Industry Research
+                            </h2>
+                            <p class="desc-text">
+                                Integrating public & private company information, industry analysis, deal information and global news
+                            </p>
+                            <div class="link-btns">
+                                <button class="free-trial text-uppercase" type="button">free trial</button>
+                                <button class="learn-more" type="button">
+                                    <span class="learn-more-txt text-uppercase">learn more</span>
+                                    <div class="icon-container">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9333 12.8C15.4667 12.4 15.4667 11.6 14.9333 11.2L11.6 8.7C10.9408 8.20557 10 8.67595 10 9.5V14.5C10 15.324 10.9408 15.7944 11.6 15.3L14.9333 12.8ZM2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12ZM4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20C7.59 20 4 16.41 4 12Z" fill="#C2D1D9"/>
+                                            <mask id="mask0_197_2577" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9333 12.8C15.4667 12.4 15.4667 11.6 14.9333 11.2L11.6 8.7C10.9408 8.20557 10 8.67595 10 9.5V14.5C10 15.324 10.9408 15.7944 11.6 15.3L14.9333 12.8ZM2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12ZM4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20C7.59 20 4 16.41 4 12Z" fill="white"/>
+                                            </mask>
+                                            <g mask="url(#mask0_197_2577)">
+                                            <rect width="24" height="24" fill="white"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-container">
+                            <img src="./imgs/key_image1.png" alt="" class="d-none d-lg-block">
+                            <img src="./imgs/kayImage.png" alt="" class="d-lg-none">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="our-focus roboto overflow-hidden">
+            <div class="container-fluid">
+                <div class="row row-cols-1 row-cols-lg-2">
+                    <div class="col">
+                        <div class="text-content">
+                            <div class="title d-inline text-uppercase">
+                                our focus
+                            </div>
+                            <h2 class="header-text">
+                                Why we are different
+                            </h2>
+                            <p class="desc-text">
+                                We understand the challenges faced by business professionals looking at Asia, especially in researching on private companies and industries. Unlike public listed companies where data is freely available, details such as financials of private companies in many Asian countries must be purchased individually. Industry research are also focused on key sectors and regions only. This is what SPEEDA, a truly Asia-focused research platform with unparalleled coverage of Asian private company data and proprietary industry research reports organised by country, aims to solve. Our team of consultants also go to the extra mile to ease the research challenges faced by our users so that they can focus their time on better data-driven decision making and analysis.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <img src="./imgs/rect16.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="esteemed-corp roboto overflow-hidden">
+            <div class="container-fluid">
+                <h2 class="header-text">
+                    Trusted by esteemed corporations
+                </h2>
+                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                    <div class="col">
+                        <div class="img-container">
+                            <img src="./imgs/companys/Meta 1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-container">
+                            <img src="./imgs/companys/UOB 1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-container">
+                            <img src="./imgs/companys/PwC 1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-container">
+                            <img src="./imgs/companys/NEC 1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-container">
+                            <img src="./imgs/companys/AMATlogo 1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-container">
+                            <img src="./imgs/companys/KPMG-Logo 1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-container">
+                            <img src="./imgs/companys/EY 1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-container">
+                            <img src="./imgs/companys/ekuinas 1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-container">
+                            <img src="./imgs/companys/ezgif-7-8e75102f86 1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-container">
+                            <img src="./imgs/companys/logo@2x 1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-sec">
+                    <a href="javascript:void(0)" class="learn-more text-uppercase ubuntu">
+                        learn more
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="key-sectors roboto overflow-hidden">
+            <h2 class="header-text">
+                Empowering more than 1800 clients from various key sectors
+            </h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                <div class="col">
+                   <div class="img-container">
+                        <div class="desc-card">
+                            <h3 class="desc-title">
+                                Private Equity
+                            </h3>
+                            <p class="desc-text">
+                                Private equity firms with a focus on ASEAN region choose SPEEDA for our strong coverage of private companies data and in-house industry reports to assist their target screening and industry analysis
+                            </p>
+                        </div>
+                        <h3 class="sector-title">Private Equity</h3>
+                       <div class="dark-filter"></div>
+                       <img src="./imgs/sectors/sector_one.jpg" alt="">
+                   </div> 
+                </div>
+                <div class="col">
+                    <div class="img-container">
+                        <div class="desc-card">
+                            <h3 class="desc-title">
+                               M&A / Advisory 
+                            </h3>
+                            <p class="desc-text">
+                               From boutique advisory firms to advisory teams in consulting firms, SPEEDA can assist with target screening, industry research and more 
+                            </p>
+                        </div>
+ 
+                        <h3 class="sector-title">M&A/Advisory</h3>
+                        <div class="dark-filter"></div>
+                       <img src="./imgs/sectors/sector_two.jpg" alt="">
+                   </div> 
+                </div>
+                <div class="col">
+                    <div class="img-container">
+                         <div class="desc-card">
+                            <h3 class="desc-title">
+                               Consulting
+                            </h3>
+                            <p class="desc-text">
+                                Management consulting, strategy consulting or market research firms can benefit from SPEEDA's extensive coverage of companies and industry information to perform competitive analysis and understand the client's industry, amongst others.
+                            </p>
+                        </div>
+                        <h3 class="sector-title">Consulting</h3>
+                       <div class="dark-filter"></div>
+                       <img src="./imgs/sectors/sector_three.jpg" alt="">
+                   </div> 
+                </div>
+                <div class="col">
+                    <div class="img-container">
+                          <div class="desc-card last">
+                            <h3 class="desc-title">
+                                Banks
+                            </h3>
+                            <p class="desc-text">
+                                SPEEDA is utilised by professionals from various departments such as corporate banking, investment banking, client coverage, and corporate strategy to efficiently gather both listed and private company data and perform industry research.
+                            </p>
+                        </div>
+                       <h3 class="sector-title">Banks</h3>
+                       <div class="dark-filter"></div>
+                       <img src="./imgs/sectors/sector_four.jpg" alt="">
+                   </div> 
+                </div>
+                <div class="col">
+                    <div class="img-container">
+                        <div class="desc-card">
+                            <h3 class="desc-title">
+                                Government Agencies
+                            </h3>
+                            <p class="desc-text">
+                                From trade agencies to investment promotion agencies, SPEEDA assists with industry research and gathering of key business information of companies by sector and region.
+                            </p>
+                        </div>
+ 
+                        <h3 class="sector-title">Government Agencies</h3>
+                       <div class="dark-filter"></div>
+                       <img src="./imgs/sectors/sector_five.jpg" alt="">
+                   </div> 
+                </div>
+                <div class="col">
+                    <div class="img-container">
+                        <div class="desc-card">
+                            <h3 class="desc-title">
+                                Stratrgy Planning
+                            </h3>
+                            <p class="desc-text">
+                                Strategy professionals use SPEEDA for industry trend monitoring, competitor benchmarking, and innovation trend monitoring. Additionally, SPEEDA assists with conducting comprehensive desktop research for new market-entry or business development before working with external consultants
+                            </p>
+                        </div>
+ 
+                        <h3 class="sector-title">Corporations<br>(Stratrgy Planning)</h3>
+                       <div class="dark-filter"></div>
+                       <img src="./imgs/sectors/sector_six.jpg" alt="">
+                   </div> 
+                </div>
+                <div class="col">
+                    <div class="img-container">
+                        <div class="desc-card">
+                            <h3 class="desc-title">
+                                Sales and Marketing
+                            </h3>
+                            <p class="desc-text">
+                                Sales and Marketing professionals utilise SPEEDA for their market research, target listing (by using various criteria such as industry, location, revenue, growth ratios etc.) and KYC (Know Your Customer) activities.
+                            </p>
+                        </div>
+ 
+                        <h3 class="sector-title">Corporations<br>(Sales and Marketing)</h3>
+                       <div class="dark-filter"></div>
+                       <img src="./imgs/sectors/sector_seven.jpg" alt="">
+                   </div> 
+                </div>
+                <div class="col">
+                    <div class="img-container">
+                        <div class="desc-card last">
+                            <h3 class="desc-title">
+                                New business development
+                            </h3>
+                            <p class="desc-text">
+                                The transformation of business ecosystems has been further accelerated by the rise of digitisation and COVID-19 pandemic. With SPEEDA's Trend Reports, ASEAN Insights and News function, users can easily stay up-to-date on current trends and grasp knowledge about the opportunities and threats in different industries.
+                            </p>
+                        </div>
+ 
+                        <h3 class="sector-title">Corporations<br>(New business development/Innovation)</h3>
+                       <div class="dark-filter"></div>
+                       <img src="./imgs/sectors/sector_eight.jpg" alt="">
+                   </div> 
+                </div>
+            </div>
+        </section>
+        
+        <section class="top-features roboto overflow-hidden">
+            <div class="angel-back d-none d-xl-block"></div>
+            <div class="container-fluid">
+                <div class="row row-cols-1 row-cols-lg-2 gy-4">
+                    <div class="col">
+                        <div class="accordion-wrapper">
+                            <h2 class="header-text text-capitalize">
+                                Our top features
+                            </h2>
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        Public and Private Company Data
+                                    </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            In addition to global coverage of public listed companies, SPEEDA provides extensive coverage of private companies information in Asia, specifically ASEAN-6 region. Users can easily screen for companies by defining parameters, such as location, industry classification, financials and keywords.
+                                        </div>
+                                        <div class="btn-footer">
+                                            <a href="#" class="learn-more text-uppercase">
+                                                learn more
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            Proprietary Industry Reports 
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            SPEEDA's industry research reports provides users with fundamental understanding of hundreds of industries ranging from major to niche sectors, including new tech-focused trends. The reports, which are organised by country (Asia-focused), are logically structured to cover key information such as market size, value chain, key regulations, competitive landscape and more.
+                                        </div>
+                                        <div class="btn-footer">
+                                            <a href="#" class="learn-more text-uppercase">
+                                                learn more
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                            On Demand Consulting Service
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            More than just a regular help desk, our SPEEDA consultants go the extra mile to ease the research challenges faced by our users via helping with niche research requests so that they can focus their time on better data-driven decision making and analysis. Examples include detailed company profiling, more complex target screening, and industry research.
+                                        </div>
+                                        <div class="btn-footer">
+                                            <a href="#" class="learn-more text-uppercase">
+                                                learn more
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingFour">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                            Flash Opinion Expert Service 
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            Access to an extensive network of industry, geopolitical, and technology experts, offering further value in addition to the comprehensive company, industry, and news information at the core of the SPEEDA platform.
+
+                                            Submit questions to subject matter experts and get reliable insights within 24 hours to provide a variety of perspectives for deeper analysis and future strategy formulation.
+                                        </div>
+                                        <div class="btn-footer">
+                                            <a href="#" class="learn-more text-uppercase">
+                                                learn more
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingFive">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                            Others features
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            Access to historical and current M&A and fundraising deals, with advanced filter options to create deal list by defining parameters such as deal type, deal size, deal parties, amongst others. Our News function allows users to monitor news and identify emerging business opportunities.
+                                        </div>
+                                        <div class="btn-footer">
+                                            <a href="#" class="learn-more text-uppercase">
+                                                learn more
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-container">
+                            <img src="./imgs/kayImage.png" alt="" class="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="free-trial-form roboto overflow-hidden">
+            <div class="container-fluid d-flex flex-column align-items-center">
+                <h2 class="header-text text-center">
+                    Start your 7 day free trial today
+                </h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3 g-lg-4">
+                    <div class="col">
+                        <form action="javascript:void(0)">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label text-uppercase">First Name</label>
+                                <input type="text" name="firstName" id="" class="form-control" placeholder="FIRST NAME">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form action="javascript:void(0)">
+                            <div class="form-group">
+                                <label for="lastName" class="form-label text-uppercase">
+                                    last name
+                                </label>
+                                <input type="text" name="lastName" id="" class="form-control" placeholder="LAST NAME">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form action="javascript:void(0)">
+                            <div class="form-group">
+                                <label for="country" class="form-label text-uppercase">country</label>
+                                <select name="country" id="" class="form-select">
+                                    <option selected>Select Your Country</option>
+                                    <option value="1">England</option>
+                                    <option value="2">Japan</option>
+                                    <option value="3">USA</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form action="javascript:void(0)">
+                            <div class="form-group">
+                                <label for="company" class="form-label text-uppercase">company</label>
+                                <input type="text" name="company" id="" class="form-control" placeholder="COMPANY NAME">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form action="javascript:void(0)">
+                            <div class="form-group">
+                                <label for="department" class="form-label text-uppercase">department</label>
+                                <input type="text" name="department" id="" class="form-control" placeholder="DEPARTMENT NAME">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form action="javascript:void(0)">
+                            <div class="form-group">
+                                <label for="jobTitle" class="form-label text-uppercase">job title</label>
+                                <input type="text" name="jobTitle" id="" class="form-control" placeholder="JOB TITLE">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form action="javascript:void(0)">
+                            <div class="form-group">
+                                <label for="email" class="form-label text-uppercase">business email</label>
+                                <input type="email" name="email" id="" class="form-control" placeholder="BUSINESS EMAIL">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form action="javascript:void(0)">
+                            <div class="form-group">
+                                <label for="phone" class="form-label text-uppercase">phone number</label>
+                                <input type="number" name="phone" id="" class="form-control" placeholder="PHONE NUMBER">
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="terms-condition">
+                    <div class="form-group">
+                        <input type="checkbox" name="termCond" id="">
+                        <label for="termCond" class="form-label text-underline">
+                            I agree to Terms & Privacy Policy
+                        </label>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="free-trial-link text-uppercase">start your free trial</a>
+                <div class="email-error-msg">
+                    <span class="fw-bold">Didn't receive the confirmation email?</span><br> If you do not receive an email, there is a possibility that the email address you entered was incorrect. In this case, please contact us at <a href="info.china@uzabase.com">info.china@uzabase.com</a> 
+                </div>
+            </div>
+        </section>
+        
+        <section class="company-location overflow-hidden">
+            <img src="./imgs/darkBack.png" alt="" class="back-img img-fluid">
+            <div class="location-info-card">
+                <div class="container-fluid">
+                   <div class="img-container">
+                       <img src="./imgs/Vector.svg" alt="">
+                   </div> 
+                   <p class="desc-text">
+                       Founded in 2008 and listed in Tokyo in 2016, UZABASE is a fast-growing tech company providing a foundation of intelligence that supports the needs of business and business. We compile, distil, and analyse global information to empower users to make timely data-driven decisions, unleashing their creative and innovative potential.
+                        
+                   </p>
+                    <p class="address">
+                        <span class="fw-bold">Uzabase Asia Pacific Pte. Ltd</span><br>
+                        Twenty Anson #11-01, 20 Anson Rd,<br> Singapore 079912
+                    </p>
+                    <a href="spasia_sales@uzabase.com" class="link">
+                       <div class="icon-container">
+                             <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 13.2264C19.9969 13.4488 19.9042 13.661 19.7419 13.8171C19.5797 13.9733 19.361 14.0608 19.1331 14.0608H1.86687C1.639 14.0608 1.4203 13.9733 1.25806 13.8171C1.09583 13.661 1.00312 13.4488 1 13.2264V1.846C1 1.62162 1.09132 1.40644 1.25389 1.24779C1.41647 1.08913 1.63696 1 1.86687 1H19.1331C19.363 1 19.5835 1.08913 19.7461 1.24779C19.9087 1.40644 20 1.62162 20 1.846V13.2264Z" stroke="#FF5E83" stroke-miterlimit="10"/>
+                                <path d="M18.7056 2.26318L12.6375 8.18517C12.0699 8.73716 11.3013 9.04711 10.5 9.04711C9.69871 9.04711 8.93008 8.73716 8.3625 8.18517L2.72188 2.68039" stroke="#FF5E83" stroke-miterlimit="10" stroke-linecap="round"/>
+                                <path d="M2.73376 12.3807L6.61688 8.59106" stroke="#FF5E83" stroke-miterlimit="10" stroke-linecap="round"/>
+                                <path d="M18.2781 12.3807L14.395 8.59106" stroke="#FF5E83" stroke-miterlimit="10" stroke-linecap="round"/>
+                            </svg>
+                       </div> 
+                        <span class="email-txt">spasia_sales@uzabase.com</span>
+                    </a>
+                </div>
+            </div>
+            <div class="resp-view-card row row-cols-1 d-lg-none">
+                <div class="col">
+                    <img src="./imgs/darkBack.png" alt="" class="img-fluid">
+                </div>
+                <div class="col">
+                    <div class="container-fluid">
+                        <div class="img-container">
+                            <img src="./imgs/Vector.svg" alt="">
+                        </div> 
+                        <p class="desc-text">
+                            Founded in 2008 and listed in Tokyo in 2016, UZABASE is a fast-growing tech company providing a foundation of intelligence that supports the needs of business and business. We compile, distil, and analyse global information to empower users to make timely data-driven decisions, unleashing their creative and innovative potential.
+                                
+                        </p>
+                        <p class="address">
+                            <span class="fw-bold">Uzabase Asia Pacific Pte. Ltd</span><br>
+                            Twenty Anson #11-01, 20 Anson Rd,<br> Singapore 079912
+                        </p>
+                        <a href="spasia_sales@uzabase.com" class="link">
+                            <div class="icon-container">
+                                <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 13.2264C19.9969 13.4488 19.9042 13.661 19.7419 13.8171C19.5797 13.9733 19.361 14.0608 19.1331 14.0608H1.86687C1.639 14.0608 1.4203 13.9733 1.25806 13.8171C1.09583 13.661 1.00312 13.4488 1 13.2264V1.846C1 1.62162 1.09132 1.40644 1.25389 1.24779C1.41647 1.08913 1.63696 1 1.86687 1H19.1331C19.363 1 19.5835 1.08913 19.7461 1.24779C19.9087 1.40644 20 1.62162 20 1.846V13.2264Z" stroke="#FF5E83" stroke-miterlimit="10"/>
+                                    <path d="M18.7056 2.26318L12.6375 8.18517C12.0699 8.73716 11.3013 9.04711 10.5 9.04711C9.69871 9.04711 8.93008 8.73716 8.3625 8.18517L2.72188 2.68039" stroke="#FF5E83" stroke-miterlimit="10" stroke-linecap="round"/>
+                                    <path d="M2.73376 12.3807L6.61688 8.59106" stroke="#FF5E83" stroke-miterlimit="10" stroke-linecap="round"/>
+                                    <path d="M18.2781 12.3807L14.395 8.59106" stroke="#FF5E83" stroke-miterlimit="10" stroke-linecap="round"/>
+                                </svg>
+                            </div> 
+                            <span class="email-txt">spasia_sales@uzabase.com</span>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer roboto overflow-hidden">
+            <div class="container-fluid">
+                <div class="row row-cols-1 row-cols-lg-3">
+                    <div class="col mb-3">
+                        <div class="icon-container">
+                            <svg width="250" height="25" viewBox="0 0 250 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M46.6344 0V24.4337H51.5693V14.9101H68.7919L72.2957 11.8505V3.05959L68.7919 0H46.6344ZM67.3115 10.5578H51.5693V4.35238H67.3115V10.5578Z" fill="white"/>
+                                <path d="M116.561 20.0813H97.0687V14.2637H111.923V9.91136H97.0687V4.30929H116.561V0H92.0845V24.4337H116.561V20.0813Z" fill="white"/>
+                                <path d="M160.876 20.0813H141.334V14.2637H156.188V9.91136H141.334V4.30929H160.876V0H136.4V24.4337H160.876V20.0813Z" fill="white"/>
+                                <path d="M180.665 0V24.4337H196.358L205.142 17.3233V7.15341L197 0H180.665ZM200.207 15.4272L194.433 20.0813H185.649V4.30929H194.927L200.207 8.92022V15.4272Z" fill="white"/>
+                                <path d="M19.8381 5.60207H25.6613V3.05959L22.1575 0H3.50375L0 3.05959V11.2041L3.50375 14.2637H20.6771V20.1244L5.82313 20.0813V18.8316H0V21.3741L3.50375 24.4337H22.1575L25.6613 21.3741V12.971L22.1575 9.91136H4.93486V4.35238H19.8381V5.60207Z" fill="white"/>
+                                <path d="M237.021 0H231.692L218.614 24.4337H224.043L226.707 19.4349L226.757 19.3056H241.808L241.857 19.4349L244.522 24.4337H250L237.021 0ZM229.126 14.9963L229.224 14.8239L234.356 5.21424L239.489 14.8239L239.587 14.9963H229.126Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="lang-btn-container d-flex flex-lg-column flex-row">
+                            <a href="javascript:void(0)" class="lang-btn gbr">
+                                    <img src="./imgs/Flag/GBR.png" alt="">
+                                <span class="text-capitalize">english</span>
+                            </a>
+                            <a href="javascript:void(0)" class="lang-btn jpn">
+                                    <img src="./imgs/Flag/JPN.png" alt="">
+                                <span class="text-capitalize">japan</span>
+                            </a>
+                        
+                        </div>
+ 
+                    </div>
+                    <div class="col d-flex justify-content-start flex-row mb-3">
+                        <ul class="foot-menu">
+                            <li class="menu-item">
+                                <a href="#" class="menu-link text-capitalize">home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:void(0)" class="menu-link text-capitalize">features</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:void(0)" class="menu-link text-capitalize">clients</a>
+                            </li>
+                        </ul>
+                        <ul class="foot-menu">
+                            <li class="menu-item">
+                                <a href="#" class="menu-link text-capitalize">pricing</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:void(0)" class="menu-link text-capitalize">asean insights</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:void(0)" class="menu-link text-capitalize">about uzabase</a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                   <div class="col">
+                        <div class="linked-link mb-3">
+                            <div class="img-container">
+                                <img src="./imgs/Group.png" alt="">
+                            </div>
+                            <p class="privacy-text">
+                                Privacy Policy<br>
+                                Copyright© UZABASE, Inc. All Rights Reserved.
+                            </p>
+                        </div>
+                   </div> 
+                </div>         
+            </div>
+        </footer>
+    </div>    
+    <script src="./dist/js/bootstrap.min.js"></script>
+    <script src="./dist/js/app.min.js"></script>
+</body>
+</html>
